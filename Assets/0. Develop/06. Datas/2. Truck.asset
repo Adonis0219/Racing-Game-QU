@@ -16,9 +16,9 @@ MonoBehaviour:
   carDesc: "\uC18D\uB3C4\uB294 \uB290\uB9AC\uC9C0\uB9CC \uCC28\uC9C0 \uD30C\uC6CC\uAC00
     \uAC15\uD55C \uCC28\uB7C9"
   carIndex: 1
-  oriCar: {fileID: 0}
+  maxFuel: 120
   oriSpeed: 4
-  maxCharge: 120
+  maxCharge: 100
   chargePerDelta: 120
   invincibleTime: 0
   speedMulti: 0

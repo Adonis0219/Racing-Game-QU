@@ -15,7 +15,7 @@ MonoBehaviour:
   carName: "\uC2B9\uC6A9\uCC28"
   carDesc: "\uBAA8\uB4E0 \uAC83\uC774 \uBB34\uB09C\uD55C \uBC38\uB7F0\uC2A4 \uCC28\uB7C9"
   carIndex: 0
-  oriCar: {fileID: 0}
+  maxFuel: 100
   oriSpeed: 5
   maxCharge: 100
   chargePerDelta: 100
