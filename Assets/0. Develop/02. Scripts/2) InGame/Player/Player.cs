@@ -59,8 +59,14 @@ public class Player : MonoBehaviour, IPullManager, IResetable
             leftMoveButton.SetPointActive
             , myCarData.oriSpeed, linesXPos
             ,dashParticle);
+
+        rightMoveButton.Init();
+        leftMoveButton.Init();
         chargePerDelta = myCarData.chargePerDelta;
         maxCharge = myCarData.maxCharge;
+        _InitColliderSystem();
+
+        Debug.Log($"Get Car Data : {myCarData.carName}, max charge : {myCarData.maxCharge}, speed : {myCarData.oriSpeed},maxFuel : {myCarData.maxFuel}");
     }
     public void Start()
     {
@@ -69,7 +75,6 @@ public class Player : MonoBehaviour, IPullManager, IResetable
             linesXPos[i] = mostLeftLineX + gapOfLinesX * i;
         #endregion
         chargeInvicible = ChargeInvincibleRoutine();
-        _InitColliderSystem();
     }
 
     void _InitColliderSystem()
@@ -78,12 +83,8 @@ public class Player : MonoBehaviour, IPullManager, IResetable
         
         _colliderSystem.InitSet();
 
-        _moveController = new PlayerMoveController(rightMoveButton.SetPointActive,
-            leftMoveButton.SetPointActive
-            , 5, linesXPos
-            ,dashParticle);
-
         _colliderSystem.itemEffects.Add("SpeedUp", _moveController.UseSpeedUp);
+
         playerCollided = PlayerCollided;
     }
     

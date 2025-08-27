@@ -27,7 +27,7 @@ public class MoveButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     #endregion
 
     public Action ResetButton;
-    private void Start()
+    public void Init()
     {
         player = GameManager.instance.player;
 
