@@ -2,6 +2,10 @@ using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+public enum MapType
+{
+    Dersert, City, Beach
+}
 public abstract class IObstacle : PoolObject, IFall, IPullManager/*, IResetable*/
 {
     // ------- Managers -------
@@ -12,7 +16,8 @@ public abstract class IObstacle : PoolObject, IFall, IPullManager/*, IResetable*
     protected Player player;
     protected ObjectFactory particleFactory;
     protected float speed;
-    
+    public MapType objectMapType;
+
     public float DownSpeed
     {
         get => speed;

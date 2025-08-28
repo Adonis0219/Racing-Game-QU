@@ -1,4 +1,5 @@
 
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -38,7 +39,7 @@ public class StageManager : BaseManager, IPullManager
     Slider timeSlider;
 
     [Header("# Variables")]
-    int curMapIndex = 0; // ÇöÀç ¸Ê ÀÎµ¦½º
+    int curMapIndex = 0; // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Îµï¿½ï¿½ï¿½
     
     public int CurMapIndex
     {
@@ -47,10 +48,10 @@ public class StageManager : BaseManager, IPullManager
         {
             if (curMapIndex < 0 || value == curMapIndex)
                 return;
-
-            gameMaps[curMapIndex].SetActive(false); // ÀÌÀü ¸Ê ²ô±â
-            curMapIndex = value; // ÇöÀç ¸Ê ÀÎµ¦½º ¾÷µ¥ÀÌÆ®
-            gameMaps[curMapIndex].SetActive(true); // »õ ¸Ê ÄÑ±â
+            
+            gameMaps[curMapIndex].SetActive(false); // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+            curMapIndex = value; // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Îµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®
+            gameMaps[curMapIndex].SetActive(true); // ï¿½ï¿½ ï¿½ï¿½ ï¿½Ñ±ï¿½
 
             dLight.color = mapColors[curMapIndex];
         }
@@ -92,32 +93,33 @@ public class StageManager : BaseManager, IPullManager
     }
 
     /// <summary>
-    /// °ÔÀÓ ½ÃÀÛ ½Ã ·£´ıÀ¸·Î ¸Ê ¼±ÅÃ ÇÔ¼ö
+    /// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ô¼ï¿½
     /// </summary>
     public void RandMap()
     {
         CurMapIndex = Random.Range(0, gameMaps.Length);
 
-        // ¸Ê ÄÑÁÖ±â
+        // ï¿½ï¿½ ï¿½ï¿½ï¿½Ö±ï¿½
         gameMaps[CurMapIndex].SetActive(true);
-        // ¸Ê ÀÌ¸§ ±ÛÀÚ ¹Ù²Ù±â
+        // ï¿½ï¿½ ï¿½Ì¸ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ù²Ù±ï¿½
         mapNameText.text = gameMaps[CurMapIndex].name;
+        //PoolManager.instance.initSpawn = true;  ì£¼ì„ í’€ì–´ì•¼ë¨
     }
 
 
-    #region ½ÂÈ£
+    #region ï¿½ï¿½È£
 
     public void GameClear()
     {
-        GameManager.instance.IsPause = true; // °ÔÀÓ ÀÏ½Ã Á¤Áö
+        GameManager.instance.IsPause = true; // ï¿½ï¿½ï¿½ï¿½ ï¿½Ï½ï¿½ ï¿½ï¿½ï¿½ï¿½
         
-        // ÃÖ°í Á¡¼ö °»½Å
+        // ï¿½Ö°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         BestRecordCheck();
         
-        // °ÔÀÓ Å¬¸®¾î UI ¶ç¿ì±â
+        // ï¿½ï¿½ï¿½ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ UI ï¿½ï¿½ï¿½ï¿½
         resultPanel.SetActive(true);
         
-        // Å¬¸®¾î ¼³¸í Ç¥½Ã
+        // Å¬ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Ç¥ï¿½ï¿½
         resultDesc.text = $"Best Score : {_dataMgr.gameData.bestScore:F0}\n" +
                           $"Current Score : {_scoreMgr.targetScore:F0}\n\n" +
                           $"Best Time : {_dataMgr.gameData.bestTime:F2}\n" +
