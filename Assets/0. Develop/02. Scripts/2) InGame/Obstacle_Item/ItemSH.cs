@@ -36,7 +36,6 @@ public class ItemSH : PoolObject, IFall
     private void OnTriggerEnter(Collider other)
     {
         // 아이템 효과 발동
-        Debug.Log($"{this.name} 획득");
         ReturnPool();
     }
 

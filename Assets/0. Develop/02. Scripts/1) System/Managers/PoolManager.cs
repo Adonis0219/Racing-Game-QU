@@ -98,8 +98,6 @@ public class PoolManager : MonoBehaviour
         }
 
         returnObj.SetActive(true);
-        
-        Debug.Log(queue.Count, returnObj);
 
         return returnObj;
     }
