@@ -126,6 +126,7 @@ public class GameManager : MonoBehaviour, IPullManager
         // 자동차 세팅
         PlayerCarSet(isMain);
         _audioMgr.BgmSoundPlay(isMain);
+        player.GetCarData(carDatas[CurCarIndex]);
 
         if (isMain)
         {
