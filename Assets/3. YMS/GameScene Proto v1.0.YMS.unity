@@ -7946,38 +7946,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c99e52d3342f2ed42883d2d92670679d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poolObjDatasDesert:
-  - type: 0
-    initCount: 0
-    original: {fileID: 7485946098520193094, guid: d9ab1238ac44a814ea96d13c0793e883, type: 3}
-  - type: 1
-    initCount: 0
-    original: {fileID: 7485946098520193094, guid: 86e67e4e1e4de6c46814d29282c2c9a7, type: 3}
-  poolObjDatasCity:
-  - type: 0
-    initCount: 0
-    original: {fileID: 7485946098520193094, guid: 6b132f7c644988649a8971da5c3473ce, type: 3}
-  - type: 1
-    initCount: 0
-    original: {fileID: 7485946098520193094, guid: 2ffe3af0a0d485a4bb1ba097bcd9e41a, type: 3}
-  poolObjDatasBeach:
-  - type: 0
-    initCount: 0
-    original: {fileID: 7485946098520193094, guid: 97570a7f5cc0e2642af4a27db5c614fe, type: 3}
-  - type: 1
-    initCount: 0
-    original: {fileID: 7485946098520193094, guid: bbba98f7a938f3c4abae2c8fd7301e71, type: 3}
-  poolObjDatasPublic:
-  - type: 2
-    initCount: 1
-    original: {fileID: 2136552314132508811, guid: 411997eae494e7b43b106b45ddeb637b, type: 3}
-  - type: 3
-    initCount: 1
-    original: {fileID: 2136552314132508811, guid: 5379d8edbb377624db2dbfc4b5b22f60, type: 3}
-  - type: 4
-    initCount: 1
-    original: {fileID: 8367907410985086596, guid: 48d081937b0c2cb43bbbd88ba61a5859, type: 3}
-  initSpawn: 0
 --- !u!1 &1167992431
 GameObject:
   m_ObjectHideFlags: 0
