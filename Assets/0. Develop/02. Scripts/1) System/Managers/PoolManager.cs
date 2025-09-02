@@ -6,7 +6,8 @@ public enum PoolObjectType
 {
     O_Tree, O_Rock,
     I_SpeedUp, I_Recovery,
-    P_Explosion
+    P_Explosion,
+    H_Weed, H_Pool, H_Sand
 }
 
 [Serializable]

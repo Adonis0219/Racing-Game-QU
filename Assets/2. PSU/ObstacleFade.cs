@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,18 +10,28 @@ public class ObstacleFade : MonoBehaviour
     {
         color = GetComponent<Image>().color;
     }
-    void Fade(Color c)
+
+    private void OnEnable()
     {
-        color = c;
-        color.a = 200f/255f;
+        Show(color);
+    }
+
+    void Show(Color c)
+    {
+        Color tempColor = color;
+        tempColor.a = 200f/255f;
+        color = tempColor;
         StartCoroutine(Fade());
     }
+    
     IEnumerator Fade()
     {
         WaitForSeconds wait = new WaitForSeconds(0.1f);
         for (float i = 200f; i >= 0; i -= 5f)
         {
-            color.a = i / 255f;
+            Color tempColor = color;
+            tempColor.a = i / 255f;
+            color = tempColor;
             yield return wait;
         }
     }

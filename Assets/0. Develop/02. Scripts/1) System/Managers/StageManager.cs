@@ -34,6 +34,8 @@ public class StageManager : BaseManager, IPullManager
 
     [SerializeField]
     public GameObject[] gameMaps;
+    [SerializeField]
+    public FadeUI[] hideUis;
 
     [SerializeField]
     Slider timeSlider;
