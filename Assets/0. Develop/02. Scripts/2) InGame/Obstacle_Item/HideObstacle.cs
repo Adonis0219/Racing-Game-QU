@@ -28,8 +28,6 @@ public class HideObstacle : PoolObject, IFall, IPullManager
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Æ®¸®°Å");
-        
         if (other.CompareTag("Player"))
         {
             fade = _stageMgr.hideUis[_stageMgr.CurMapIndex];

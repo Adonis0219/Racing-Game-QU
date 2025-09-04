@@ -65,8 +65,6 @@ public class Player : MonoBehaviour, IPullManager, IResetable
         chargePerDelta = myCarData.chargePerDelta;
         maxCharge = myCarData.maxCharge;
         _InitColliderSystem();
-
-        Debug.Log($"Get Car Data : {myCarData.carName}, max charge : {myCarData.maxCharge}, speed : {myCarData.oriSpeed},maxFuel : {myCarData.maxFuel}");
     }
     public void Start()
     {

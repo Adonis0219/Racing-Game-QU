@@ -115,8 +115,7 @@ public class PoolManager : MonoBehaviour, IPullManager
     void CreateParents()
     {
         int mapDataLength = 0;
-        
-        Debug.Log($"mapIndex: {_stageMgr.CurMapIndex}");
+
         switch (_stageMgr.CurMapIndex)
         {
             case 0:
@@ -173,10 +172,46 @@ public class PoolManager : MonoBehaviour, IPullManager
         // }
     }
     
+    /*
+    void CreateT()
+    {
+        PoolObjectData[] datas = null;
+
+        switch (_stageMgr.CurMapIndex)
+        {
+            case 0:
+                datas = poolObjDatasDesert;
+                break;
+            case 1:
+                datas = poolObjDatasCity;
+                break;
+            case 2:
+                datas = poolObjDatasBeach;
+                break;
+        }
+
+        if (datas == null) return;
+        
+        parents = new Transform[datas.Length+poolObjDatasPublic.Length];
+
+        for (int i = 0; i < datas.Length; i++)
+        {
+            GameObject parent = new GameObject(datas[i].type.ToString());
+            parent.transform.SetParent(transform);
+            parents[i] = parent.transform;
+        }
+        
+        for (int i = 0; i < poolObjDatasPublic.Length; i++)
+        {
+            GameObject parent = new GameObject(poolObjDatasPublic[i].type.ToString());
+            parent.transform.SetParent(transform);
+            parents[i + datas.Length] = parent.transform;
+        }
+    }*/
+    
     GameObject CreateObject(PoolObjectData data)
     {
         int createIndex = (int)data.type < 5 ? (int)data.type : 2;
-        Debug.Log(createIndex);
         GameObject obj = Instantiate(data.original, parents[createIndex]);
         obj.name = data.type.ToString();
         obj.SetActive(false);
