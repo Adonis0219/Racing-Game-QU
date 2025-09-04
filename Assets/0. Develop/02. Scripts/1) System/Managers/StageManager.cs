@@ -105,7 +105,7 @@ public class StageManager : BaseManager, IPullManager
         gameMaps[CurMapIndex].SetActive(true);
         // �� �̸� ���� �ٲٱ�
         mapNameText.text = gameMaps[CurMapIndex].name;
-        //PoolManager.instance.initSpawn = true;  주석 풀어야됨
+        PoolManager.instance.initSpawn = true;
     }
 
 

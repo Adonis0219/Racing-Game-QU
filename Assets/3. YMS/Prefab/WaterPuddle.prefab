@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6830268724485529424}
   - component: {fileID: 1922612840424860733}
   - component: {fileID: 3679877449403794726}
-  - component: {fileID: 8437968293104317678}
+  - component: {fileID: 2925723865876727419}
   m_Layer: 0
   m_Name: WaterPuddle
   m_TagString: Untagged
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 9154389041406092888}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.11, y: 2.84, z: 0.139}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -103,13 +103,13 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 0.6856673}
-  m_Center: {x: 0, y: 0, z: -0.3}
---- !u!114 &8437968293104317678
+  m_Size: {x: 1, y: 0.65485775, z: 0.09854855}
+  m_Center: {x: 0, y: -0.006539479, z: -0.006440632}
+--- !u!114 &2925723865876727419
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -118,8 +118,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 9154389041406092888}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3052b076b046cbb46adcfcabca0114e6, type: 3}
+  m_Script: {fileID: 11500000, guid: 14bbbef11b5ad2f4d9fc847e1bb257ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poolType: 1
-  objectMapType: 1
+  poolType: 6
+  fade: {fileID: 0}

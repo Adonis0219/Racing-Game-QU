@@ -24,6 +24,7 @@ public class HideSpawner : BaseSpawner, IPullManager
     {
         #region Method Param
         int mapIndex = _stageMgr.CurMapIndex;
+        //PoolObjectType type = (PoolObjectType)(mapIndex + 5);
         PoolObjectType type = (PoolObjectType)(mapIndex + 5);
         
         int randIndex = UnityEngine.Random.Range(0, spawnPosX.Length);

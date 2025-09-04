@@ -30,8 +30,8 @@ public abstract class BaseSpawner : MonoBehaviour
             coru = StartCoroutine(SpawnRoutine());
         }
         
-        // °ÔÀÓ¾ÀÀÌ ¾Æ´Ò ¶§´Â ¹«Á¶°Ç ÁßÁö ÇÏ±â À§ÇØ
-        // È®Àå¼º °í·Á
+        // ê²Œì„ì”¬ì´ ì•„ë‹ ë•ŒëŠ” ë¬´ì¡°ê±´ ì¤‘ì§€ í•˜ê¸° ìœ„í•´
+        // í™•ì¥ì„± ê³ ë ¤
         else if (coru != null)
         {
             StopCoroutine(coru);
@@ -50,7 +50,7 @@ public abstract class BaseSpawner : MonoBehaviour
     }
 
     /// <summary>
-    /// ÆÑÅä¸®¿¡ ½ºÆ÷³Ê¸¦ ¿¬°áÇØÁÖ´Â ÇÔ¼ö
+    /// íŒ©í† ë¦¬ì— ìŠ¤í¬ë„ˆë¥¼ ì—°ê²°í•´ì£¼ëŠ” í•¨ìˆ˜
     /// </summary>
     public abstract void SpawnConnect();
 }
